@@ -1,0 +1,296 @@
+/* Glassy Theme - UI components and effects */
+
+/* CSS Custom Properties */
+:root {
+    /* Colors */
+    --color-primary: #8b5cf6;
+    --color-primary-light: #a78bfa;
+    --color-primary-dark: #7c3aed;
+    --color-secondary: #c084fc;
+    --color-accent: #e879f9;
+    
+    --color-bg-dark: #0f0f1e;
+    --color-bg-darker: #080812;
+    --color-glass: rgba(139, 92, 246, 0.1);
+    
+    --color-text-primary: #ffffff;
+    --color-text-secondary: #cbd5e1;
+    --color-text-muted: #94a3b8;
+    
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 4rem;
+    --spacing-xl: 6rem;
+    
+    /* Typography */
+    --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-size-base: 16px;
+    --font-size-lg: 1.125rem;
+    --font-size-xl: 1.5rem;
+    --font-size-2xl: 2rem;
+    --font-size-3xl: 3rem;
+    
+    /* Effects */
+    --blur-amount: 20px;
+    --transition-speed: 0.3s;
+    --border-radius: 1rem;
+    --glass-border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Glassy Background Effect */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(192, 132, 252, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 40% 20%, rgba(232, 121, 249, 0.1) 0%, transparent 50%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Glassy Component Base */
+.glassy {
+    background: var(--color-glass);
+    backdrop-filter: blur(var(--blur-amount));
+    -webkit-backdrop-filter: blur(var(--blur-amount));
+    border: var(--glass-border);
+    border-radius: var(--border-radius);
+}
+
+/* Navigation Bar Glassy Effect */
+.navbar {
+    background: rgba(15, 15, 30, 0.8);
+    backdrop-filter: blur(var(--blur-amount));
+    -webkit-backdrop-filter: blur(var(--blur-amount));
+    border-bottom: var(--glass-border);
+}
+
+/* Mobile Menu Glassy Effect */
+.mobile-menu {
+    background: rgba(15, 15, 30, 0.95);
+    backdrop-filter: blur(var(--blur-amount));
+    -webkit-backdrop-filter: blur(var(--blur-amount));
+    border-left: var(--glass-border);
+}
+
+/* Card Glassy Effect */
+.feature-card,
+.step-card,
+.faq-item,
+.privacy-section-item,
+.contact-info,
+.contact-form {
+    background: rgba(139, 92, 246, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: var(--glass-border);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-md);
+    transition: all var(--transition-speed);
+}
+
+/* Hover Effects for Cards */
+.feature-card:hover,
+.step-card:hover {
+    transform: translateY(-5px);
+    background: rgba(139, 92, 246, 0.1);
+    box-shadow: 0 10px 40px rgba(139, 92, 246, 0.3);
+    border-color: rgba(139, 92, 246, 0.3);
+}
+
+/* Glassy Input Fields */
+input,
+textarea,
+select {
+    background: rgba(139, 92, 246, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: var(--glass-border);
+    border-radius: 0.5rem;
+    padding: var(--spacing-sm);
+    color: var(--color-text-primary);
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+    transition: all var(--transition-speed);
+    width: 100%;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    background: rgba(139, 92, 246, 0.1);
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.2);
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: var(--color-text-muted);
+}
+
+/* Glassy Buttons */
+button {
+    font-family: var(--font-family);
+}
+
+.submit-button {
+    padding: var(--spacing-sm) var(--spacing-md);
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+    border: none;
+    border-radius: var(--border-radius);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-speed);
+    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
+}
+
+.submit-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(139, 92, 246, 0.4);
+}
+
+/* Glassy Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-bg-darker);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(139, 92, 246, 0.5);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(139, 92, 246, 0.7);
+}
+
+/* Glassy Selection */
+::selection {
+    background: rgba(139, 92, 246, 0.3);
+    color: var(--color-text-primary);
+}
+
+/* Glow Effects */
+.glow {
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
+}
+
+.glow-hover:hover {
+    box-shadow: 0 0 30px rgba(139, 92, 246, 0.7);
+}
+
+/* Animated Gradient Background */
+@keyframes gradient-shift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.animated-gradient {
+    background: linear-gradient(
+        135deg,
+        var(--color-primary),
+        var(--color-secondary),
+        var(--color-accent),
+        var(--color-primary)
+    );
+    background-size: 300% 300%;
+    animation: gradient-shift 10s ease infinite;
+}
+
+/* Frosted Glass Overlay */
+.frosted-overlay {
+    position: relative;
+    overflow: hidden;
+}
+
+.frosted-overlay::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    pointer-events: none;
+}
+
+/* Shimmer Effect */
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+.shimmer {
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0.1) 50%,
+        transparent 100%
+    );
+    background-size: 1000px 100%;
+    animation: shimmer 3s infinite;
+}
+
+/* Glass Reflection Effect */
+.glass-reflection {
+    position: relative;
+}
+
+.glass-reflection::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.1) 0%,
+        transparent 100%
+    );
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    pointer-events: none;
+}
+
+/* Fallback for browsers without backdrop-filter support */
+@supports not (backdrop-filter: blur(20px)) {
+    .navbar,
+    .mobile-menu,
+    .glassy,
+    .feature-card,
+    .step-card,
+    .faq-item,
+    .privacy-section-item,
+    .contact-info,
+    .contact-form,
+    input,
+    textarea,
+    select {
+        background: rgba(15, 15, 30, 0.9);
+    }
+}

@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vastorn OTS Extension - Save your details once and fill any form with a single click. Stop typing the same information repeatedly.">
+    <meta name="keywords" content="form filler, auto fill, chrome extension, form automation, data entry">
+    <title>Vastorn OTS Extension - Save Once, Fill Everywhere</title>
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/glassy-theme.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="brand-text">Vastorn OTS</span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#tutorial" class="nav-link">How to Use</a></li>
+                <!-- <li><a href="#faq" class="nav-link">FAQ</a></li> -->
+                <!-- <li><a href="#privacy" class="nav-link">Privacy</a></li> -->
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#developer" class="nav-link">Developer</a></li>
+
+            </ul>
+            <button class="cta-button" id="installBtn">Install Extension</button>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul class="mobile-nav-links">
+            <li><a href="#home" class="mobile-nav-link">Home</a></li>
+            <li><a href="#features" class="mobile-nav-link">Features</a></li>
+            <li><a href="#tutorial" class="mobile-nav-link">How to Use</a></li>
+            <li><a href="#faq" class="mobile-nav-link">FAQ</a></li>
+            <li><a href="#privacy" class="mobile-nav-link">Privacy</a></li>
+            <li><a href="#developer" class="mobile-nav-link">Developer</a></li>
+            <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Vastorn OTS Extension</h1>
+                    <p class="hero-subtitle">Save Once, Fill Everywhere</p>
+                    <p class="hero-description">
+                        Stop typing the same information repeatedly. Save your details once 
+                        and fill any form with a single click.
+                    </p>
+                    <button class="cta-button-large" id="heroInstallBtn">Get Started</button>
+                </div>
+                <div class="hero-visual">
+                    <div class="placeholder-image">
+                        <p>📸 Extension Screenshot</p>
+                        <p class="placeholder-text">Add screenshot here</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features-section">
+            <div class="container">
+                <h2 class="section-title">Powerful Features</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">💾</div>
+                        <h3>Save Once, Use Everywhere</h3>
+                        <p>Store your information once and reuse it across unlimited forms. No more repetitive typing!</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">🎯</div>
+                        <h3>One-Click Fill</h3>
+                        <p>Fill button next to each saved item. Click once and watch your form populate automatically.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">🖱️</div>
+                        <h3>Drag & Drop</h3>
+                        <p>Intuitive drag-and-drop functionality. Simply drag your saved data to any input field.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">📋</div>
+                        <h3>Quick Copy</h3>
+                        <p>Copy button for manual pasting. Perfect for when you need more control over your data.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">➕</div>
+                        <h3>Custom Fields</h3>
+                        <p>Add any key-value pair with the + button. Customize your saved data to match your needs.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">🌐</div>
+                        <h3>Universal Compatibility</h3>
+                        <p>Works with Google Forms, Excel forms, job applications, and any web form you encounter.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">🔒</div>
+                        <h3>Secure Storage</h3>
+                        <p>Your data is safely stored in Google Cloud with 100KB free storage. Encrypted and secure.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">🛡️</div>
+                        <h3>Privacy First</h3>
+                        <p>Your data stays yours. We never share or sell your information to third parties.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tutorial Section -->
+        <section id="tutorial" class="tutorial-section">
+            <div class="container">
+                <h2 class="section-title">How to Use</h2>
+                <div class="flowchart-container">
+                    <!-- Step 1 - Right Side -->
+                    <div class="flowchart-step step-right">
+                        <div class="step-card">
+                            <div class="step-number">1</div>
+                            <h3>Install the Extension</h3>
+                            <p>Click the "Install Extension" button and add OTS to your Chrome browser. It takes just seconds!</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flow-arrow arrow-down-left">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="arrowGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#ec4899;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <path d="M 80 10 Q 50 30, 20 90" stroke="url(#arrowGradient1)" stroke-width="3" fill="none" stroke-linecap="round"/>
+                            <polygon points="20,90 15,80 25,85" fill="url(#arrowGradient1)"/>
+                        </svg>
+                    </div>
+                    
+                    <!-- Step 2 - Left Side -->
+                    <div class="flowchart-step step-left">
+                        <div class="step-card">
+                            <div class="step-number">2</div>
+                            <h3>Open the Extension</h3>
+                            <p>Click the OTS icon in your Chrome toolbar to open the extension popup.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flow-arrow arrow-down-right">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="arrowGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#ec4899;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <path d="M 20 10 Q 50 30, 80 90" stroke="url(#arrowGradient2)" stroke-width="3" fill="none" stroke-linecap="round"/>
+                            <polygon points="80,90 75,85 85,80" fill="url(#arrowGradient2)"/>
+                        </svg>
+                    </div>
+                    
+                    <!-- Step 3 - Right Side -->
+                    <div class="flowchart-step step-right">
+                        <div class="step-card">
+                            <div class="step-number">3</div>
+                            <h3>Add Your Data</h3>
+                            <p>Click the + button to add key-value pairs. For example: Name → John Doe, Email → john@example.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flow-arrow arrow-down-left">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M 80 10 Q 50 30, 20 90" stroke="url(#arrowGradient1)" stroke-width="3" fill="none" stroke-linecap="round"/>
+                            <polygon points="20,90 15,80 25,85" fill="url(#arrowGradient1)"/>
+                        </svg>
+                    </div>
+                    
+                    <!-- Step 4 - Left Side -->
+                    <div class="flowchart-step step-left">
+                        <div class="step-card">
+                            <div class="step-number">4</div>
+                            <h3>Fill Forms</h3>
+                            <p>When you encounter a form, open the extension and click the Fill button next to each data item to populate matching fields.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flow-arrow arrow-down-right">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M 20 10 Q 50 30, 80 90" stroke="url(#arrowGradient2)" stroke-width="3" fill="none" stroke-linecap="round"/>
+                            <polygon points="80,90 75,85 85,80" fill="url(#arrowGradient2)"/>
+                        </svg>
+                    </div>
+                    
+                    <!-- Step 5 - Right Side -->
+                    <div class="flowchart-step step-right">
+                        <div class="step-card">
+                            <div class="step-number">5</div>
+                            <h3>Drag & Drop</h3>
+                            <p>Alternatively, drag any saved data directly from the extension to the form field where you want it.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flow-arrow arrow-down-left">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M 80 10 Q 50 30, 20 90" stroke="url(#arrowGradient1)" stroke-width="3" fill="none" stroke-linecap="round"/>
+                            <polygon points="20,90 15,80 25,85" fill="url(#arrowGradient1)"/>
+                        </svg>
+                    </div>
+                    
+                    <!-- Step 6 - Left Side -->
+                    <div class="flowchart-step step-left">
+                        <div class="step-card">
+                            <div class="step-number">6</div>
+                            <h3>Copy Data</h3>
+                            <p>Use the copy button next to any data item to copy it to your clipboard for manual pasting.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="faq-section">
+            <div class="container">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <div class="faq-grid" id="faqContainer">
+                    <div class="faq-column">
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                <span>Where is my data stored?</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Your data is securely stored in Google Cloud Storage. We provide 100KB of free storage, which is more than enough for hundreds of form fields. Your data is encrypted and only accessible by you.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                <span>Is my data secure?</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Absolutely! We use industry-standard encryption to protect your data. Your information is stored securely in Google Cloud with enterprise-grade security measures. We never share or sell your data to third parties.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                <span>What websites does it work with?</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>OTS Extension works with all websites and web forms! Whether it's Google Forms, Excel online forms, job applications, registration forms, or any other web form, our extension can help you fill them quickly and easily.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                <span>How much data can I store?</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>You get 100KB of free storage with Google Cloud. This is enough to store hundreds of key-value pairs. For reference, 100KB can hold approximately 500-1000 typical form fields depending on the length of your data.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-column">
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                <span>Which browsers are supported?</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Currently, OTS Extension is available for Google Chrome and all Chromium-based browsers (like Microsoft Edge, Brave, and Opera). We're working on support for other browsers in the future.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                <span>Can I export my data?</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Yes! You can export all your saved data as a backup. Simply open the extension settings and use the export feature to download your data as a JSON file. You can also import it back anytime.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                <span>How do I delete my data?</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>You have full control over your data. You can delete individual items by clicking the delete button next to each entry, or clear all data at once from the extension settings panel. Deleted data is permanently removed from Google Cloud.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                <span>Does it work offline?</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Yes! Your data is cached locally in your browser, so you can access and use it even when you're offline. Changes will sync to Google Cloud when you're back online.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Privacy Policy Section -->
+        <section id="privacy" class="privacy-section">
+            <div class="container">
+                <h2 class="section-title">Privacy & Security</h2>
+                <div class="privacy-content">
+                    <div class="privacy-intro">
+                        <p style="font-size: 1.1rem; color: var(--color-text-secondary); max-width: 700px; margin: 0 auto;">
+                            Your privacy is our priority. We're committed to protecting your data with enterprise-grade security while giving you complete control.
+                        </p>
+                    </div>
+                    
+                    <div class="privacy-section-item">
+                        <h3>What We Collect</h3>
+                        <p>We only collect data you explicitly save:</p>
+                        <ul>
+                            <li>Your saved key-value pairs</li>
+                            <li>Extension preferences</li>
+                            <li>Optional anonymous usage stats</li>
+                        </ul>
+                        <div class="privacy-highlight">
+                            <strong>We NEVER collect:</strong> Browsing history, passwords, or website data
+                        </div>
+                    </div>
+                    
+                    <div class="privacy-section-item">
+                        <h3>Secure Storage</h3>
+                        <p>Your data is protected with:</p>
+                        <ul>
+                            <li>256-bit AES encryption</li>
+                            <li>Secure HTTPS connections</li>
+                            <li>Google Cloud infrastructure</li>
+                            <li>Regular security audits</li>
+                        </ul>
+                        <div class="privacy-highlight">
+                            <strong>100KB free storage</strong> - enough for 500-1000 form fields
+                        </div>
+                    </div>
+                    
+                    <div class="privacy-section-item">
+                        <h3>Zero Data Sharing</h3>
+                        <p>Your data belongs to you alone:</p>
+                        <ul>
+                            <li>No selling to third parties</li>
+                            <li>No marketing partnerships</li>
+                            <li>No social media integration</li>
+                            <li>No advertising networks</li>
+                        </ul>
+                        <div class="privacy-highlight">
+                            <strong>Exception:</strong> Legal compliance or with your explicit consent
+                        </div>
+                    </div>
+                    
+                    <div class="privacy-section-item">
+                        <h3>Your Control</h3>
+                        <p>Full control over your data:</p>
+                        <ul>
+                            <li>View anytime through extension</li>
+                            <li>Edit or update instantly</li>
+                            <li>Delete individual items</li>
+                            <li>Export as backup (JSON)</li>
+                            <li>Import from backup</li>
+                        </ul>
+                        <div class="privacy-highlight">
+                            <strong>One-click delete:</strong> Remove all data permanently
+                        </div>
+                    </div>
+                    
+                    <div class="privacy-section-item">
+                        <h3>No Tracking</h3>
+                        <p>We respect your browsing privacy:</p>
+                        <ul>
+                            <li>No cookies or trackers</li>
+                            <li>No behavior monitoring</li>
+                            <li>No analytics by default</li>
+                            <li>Opt-in only for improvements</li>
+                        </ul>
+                        <div class="privacy-highlight">
+                            <strong>Access only:</strong> Form fields when you use fill/drag/copy
+                        </div>
+                    </div>
+                    
+                    <div class="privacy-section-item">
+                        <h3>Data Retention</h3>
+                        <p>Your data lifecycle:</p>
+                        <ul>
+                            <li>Stored while you use extension</li>
+                            <li>Deleted within 30 days of uninstall</li>
+                            <li>Immediate deletion on request</li>
+                            <li>Offline access with local cache</li>
+                        </ul>
+                        <div class="privacy-highlight">
+                            <strong>Contact us:</strong> support@vastorn.com for instant deletion
+                        </div>
+                    </div>
+                    
+                    <div class="privacy-section-item">
+                        <h3>Browser Support</h3>
+                        <p>Compatible with:</p>
+                        <ul>
+                            <li>Google Chrome</li>
+                            <li>Microsoft Edge</li>
+                            <li>Brave Browser</li>
+                            <li>Opera Browser</li>
+                        </ul>
+                        <div class="privacy-highlight">
+                            <strong>Coming soon:</strong> Firefox and Safari support
+                        </div>
+                    </div>
+                    
+                    <div class="privacy-section-item">
+                        <h3>Children's Safety</h3>
+                        <p>Protecting young users:</p>
+                        <ul>
+                            <li>Not directed to children under 13</li>
+                            <li>No knowingly collected child data</li>
+                            <li>Immediate removal if reported</li>
+                            <li>COPPA compliant</li>
+                        </ul>
+                        <div class="privacy-highlight">
+                            <strong>Report concerns:</strong> Contact us immediately
+                        </div>
+                    </div>
+                    
+                    <div class="privacy-section-item" style="grid-column: 1 / -1;">
+                        <h3>Questions or Concerns?</h3>
+                        <p style="margin-bottom: var(--spacing-sm);">We're here to help with any privacy questions or data requests.</p>
+                        <div style="display: flex; gap: var(--spacing-md); flex-wrap: wrap; align-items: center;">
+                            <div>
+                                <strong style="color: var(--color-primary-light);">📧 Email:</strong> 
+                                <a href="mailto:support@vastorn.com" style="color: var(--color-primary); text-decoration: underline;">support@vastorn.com</a>
+                            </div>
+                            <div>
+                                <strong style="color: var(--color-primary-light);">⏱️ Response:</strong> 
+                                <span style="color: var(--color-text-secondary);">Within 48 hours</span>
+                            </div>
+                            <div>
+                                <strong style="color: var(--color-primary-light);">📅 Updated:</strong> 
+                                <span style="color: var(--color-text-secondary);">December 2025</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2 class="section-title">Contact Us</h2>
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <h3>Get in Touch</h3>
+                        <p>Have questions? We're here to help! Reach out to us and we'll get back to you as soon as possible.</p>
+                        <p>📧 <strong>Email:</strong> <a href="mailto:support@vastorn.com">support@vastorn.com</a></p>
+                        <p>💬 <strong>Response Time:</strong> Usually within 24 hours</p>
+                        <p>🌍 <strong>Company:</strong> Vastorn</p>
+                    </div>
+                    
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" name="name" required placeholder="Your name">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="How can we help you?"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-button">Send Message</button>
+                        
+                        <div class="form-success" hidden>
+                            <p>✓ Message sent successfully! We'll get back to you soon.</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+        <!-- Developer Section -->
+        <section id="developer" class="developer-section">
+            <div class="container">
+                <h2 class="section-title">Meet the Developer</h2>   
+                <div class="developer-card">
+                    <div class="developer-avatar">
+                        <div class="avatar-placeholder">👨‍💻</div>
+                    </div>
+                    <div class="developer-info">
+                        <h3>VasanthaPriyan P</h3>
+                        <p class="developer-role">Software Developer</p>
+                        <p class="developer-bio">
+                            Passionate about creating tools that make life easier. Built Vastorn OTS Extension to solve the repetitive task of filling forms.
+                        </p>
+                        <div class="developer-links">
+                            <a href="https://github.com/Vasantha-priyan" class="dev-link" aria-label="GitHub">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </a>
+                            <a href="www.linkedin.com/in/vasanthapriyan2" class="dev-link" aria-label="LinkedIn">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="dev-link" aria-label="Portfolio">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/>
+                                </svg>
+                            </a>
+                            <a href="mailto:support@vastorn.com" class="dev-link" aria-label="Email">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="brand-text">Vastorn</span>
+                    <p>&copy; 2025 Vastorn. All rights reserved.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#privacy">Privacy Policy</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#developer">Developer</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="js/navigation.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/faq.js"></script>
+    <script src="js/contact-form.js"></script>
+</body>
+</html>

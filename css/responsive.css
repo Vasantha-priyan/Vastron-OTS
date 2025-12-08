@@ -1,0 +1,292 @@
+/* Responsive CSS - Media queries and responsive styles */
+
+/* Tablet Styles (768px - 1024px) */
+@media screen and (max-width: 1024px) {
+    .container {
+        padding: 0 var(--spacing-sm);
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: var(--font-size-xl);
+    }
+    
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Mobile Styles (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    /* Navigation */
+    .nav-links {
+        display: none;
+    }
+    
+    .hamburger {
+        display: flex;
+    }
+    
+    .cta-button {
+        display: none;
+    }
+    
+    /* Hero Section */
+    .hero-section .container {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    .hero-content {
+        text-align: center;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: var(--font-size-lg);
+    }
+    
+    .hero-description {
+        font-size: var(--font-size-base);
+    }
+    
+    .hero-visual {
+        order: -1;
+    }
+    
+    /* Features Grid */
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Sections */
+    section {
+        min-height: auto;
+        padding: var(--spacing-lg) 0;
+    }
+    
+    .section-title {
+        font-size: var(--font-size-xl);
+        margin-bottom: var(--spacing-md);
+    }
+    
+    /* Footer */
+    .footer-content {
+        flex-direction: column;
+        gap: var(--spacing-md);
+        text-align: center;
+    }
+    
+    .footer-links {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+}
+
+/* Small Mobile Styles (max-width: 480px) */
+@media screen and (max-width: 480px) {
+    :root {
+        --font-size-base: 14px;
+        --spacing-md: 1.5rem;
+        --spacing-lg: 3rem;
+        --spacing-xl: 4rem;
+    }
+    
+    .hero-title {
+        font-size: 1.75rem;
+    }
+    
+    .hero-subtitle {
+        font-size: var(--font-size-base);
+    }
+    
+    .cta-button-large {
+        padding: var(--spacing-sm) var(--spacing-md);
+        font-size: var(--font-size-base);
+    }
+    
+    .nav-container {
+        padding: 0 var(--spacing-sm);
+    }
+    
+    .brand-text {
+        font-size: var(--font-size-lg);
+    }
+}
+
+/* Landscape Mobile Styles */
+@media screen and (max-height: 600px) and (orientation: landscape) {
+    section {
+        min-height: auto;
+        padding: var(--spacing-md) 0;
+    }
+    
+    .hero-section {
+        padding-top: calc(var(--spacing-md) + 60px);
+    }
+}
+
+/* High Resolution Displays */
+@media screen and (min-width: 1440px) {
+    .container {
+        max-width: 1400px;
+    }
+    
+    .hero-title {
+        font-size: 4rem;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .navbar,
+    .hamburger,
+    .mobile-menu,
+    .cta-button,
+    .cta-button-large,
+    .site-footer {
+        display: none;
+    }
+    
+    body {
+        background: white;
+        color: black;
+    }
+    
+    section {
+        page-break-inside: avoid;
+    }
+}
+
+/* Reduced Motion Preference */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* Dark Mode Support (if system prefers dark) */
+@media (prefers-color-scheme: dark) {
+    /* Already dark by default, but can add overrides if needed */
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+    /* Increase touch target sizes */
+    .nav-link,
+    .mobile-nav-link,
+    button,
+    a {
+        min-height: 44px;
+        min-width: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    /* Remove hover effects on touch devices */
+    .feature-card:hover,
+    .tutorial-step:hover {
+        transform: none;
+    }
+}
+
+
+/* Flowchart Responsive */
+@media screen and (max-width: 768px) {
+    .flowchart-step.step-right,
+    .flowchart-step.step-left {
+        justify-content: center;
+        padding: 0;
+    }
+    
+    .step-card {
+        max-width: 100%;
+    }
+    
+    .flow-arrow {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .flow-arrow.arrow-down-left svg,
+    .flow-arrow.arrow-down-right svg {
+        transform: rotate(90deg);
+    }
+    
+    .faq-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    .privacy-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-container {
+        gap: var(--spacing-md);
+    }
+    
+    .developer-card {
+        flex-direction: column;
+        text-align: center;
+        padding: var(--spacing-md);
+    }
+    
+    .developer-links {
+        justify-content: center;
+    }
+}
+
+/* Small Mobile Flowchart */
+@media screen and (max-width: 480px) {
+    .step-card {
+        padding: var(--spacing-md);
+    }
+    
+    .step-card .step-number {
+        width: 45px;
+        height: 45px;
+        font-size: 1.25rem;
+        top: -20px;
+    }
+    
+    .step-card h3 {
+        font-size: 1.1rem;
+    }
+    
+    .flow-arrow {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .privacy-section-item {
+        padding: var(--spacing-md);
+    }
+    
+    .avatar-placeholder {
+        width: 100px;
+        height: 100px;
+        font-size: 3rem;
+    }
+    
+    .developer-info h3 {
+        font-size: 1.5rem;
+    }
+}
