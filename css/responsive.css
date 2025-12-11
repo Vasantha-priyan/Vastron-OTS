@@ -122,6 +122,15 @@
     .brand-text {
         font-size: var(--font-size-lg);
     }
+    
+    .brand-logo {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .extension-image {
+        max-width: 300px;
+    }
 }
 
 /* Landscape Mobile Styles */
