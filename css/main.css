@@ -24,7 +24,7 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 var(--spacing-md);
+    padding: 10 var(--spacing-md);
 }
 
 /* Typography */
@@ -644,22 +644,11 @@ section {
     opacity: 0.8;
 }
 
-.footer-logo {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-xs);
-    margin-bottom: var(--spacing-xs);
-}
-
-.footer-go-img {
-    width: 24px;
-    height: 24px;
-    border-radius: 4px;
-    opacity: 0.8;
-}
-
 .footer-brand p {
-
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    margin-top: var(--spacing-xs);
+}
 
 .footer-links {
     display: flex;
