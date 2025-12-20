@@ -503,18 +503,58 @@ section {
 
 /* Privacy Section - Card Grid Layout */
 .privacy-content {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
     gap: var(--spacing-md);
+    align-items: start;
 }
 
 .privacy-intro {
     grid-column: 1 / -1;
     text-align: center;
-    padding: var(--spacing-lg);
-    margin-bottom: var(--spacing-md);
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+}
+
+/* Ensure privacy items take equal space */
+.privacy-section-item {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Force 2-column layout on desktop and tablet */
+@media screen and (min-width: 769px) {
+    .privacy-content {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: var(--spacing-lg) !important;
+        max-width: 1200px !important;
+    }
+}
+
+/* Specific 2-column grid class */
+.privacy-grid-2col {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: var(--spacing-md) !important;
+}
+
+/* Desktop specific override */
+@media screen and (min-width: 769px) {
+    .privacy-grid-2col {
+        grid-template-columns: 1fr 1fr !important;
+        gap: var(--spacing-lg) !important;
+    }
+}
+
+/* Mobile override */
+@media screen and (max-width: 768px) {
+    .privacy-grid-2col {
+        grid-template-columns: 1fr !important;
+        gap: var(--spacing-md) !important;
+    }
 }
 
 /* Contact Section */
@@ -1100,4 +1140,19 @@ section {
     border-radius: var(--border-radius);
     text-align: center;
     color: var(--color-text-muted);
+}
+
+
+
+/* Force grid layout with highest specificity */
+body .privacy-content.privacy-grid-2col {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 1.5rem !important;
+}
+
+@media screen and (max-width: 768px) {
+    body .privacy-content.privacy-grid-2col {
+        grid-template-columns: 1fr !important;
+    }
 }

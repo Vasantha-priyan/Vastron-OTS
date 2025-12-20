@@ -21,6 +21,13 @@
     .contact-container {
         grid-template-columns: 1fr;
     }
+    
+    /* Keep privacy section as 2 columns on tablets */
+    .privacy-content {
+        grid-template-columns: 1fr 1fr !important;
+        gap: var(--spacing-sm) !important;
+        max-width: 900px;
+    }
 }
 
 /* Mobile Styles (max-width: 768px) */
@@ -217,7 +224,7 @@
 }
 
 
-/* Flowchart Responsive */
+/* Mobile Responsive */
 @media screen and (max-width: 768px) {
     .flowchart-step.step-right,
     .flowchart-step.step-left {
@@ -245,7 +252,8 @@
     }
     
     .privacy-content {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
+        gap: var(--spacing-md) !important;
     }
     
     .contact-container {

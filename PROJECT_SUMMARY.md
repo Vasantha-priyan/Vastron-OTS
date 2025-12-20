@@ -114,7 +114,7 @@ vastorn-ots-website/
 
 ## 📞 Support
 
-**Email:** support@vastorn.com
+**Email:** helpvastorn@gmail.com
 
 ## 🎉 Status
 

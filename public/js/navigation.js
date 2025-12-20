@@ -150,10 +150,8 @@ class Navigation {
         
         installButtons.forEach(button => {
             button.addEventListener('click', () => {
-                // Placeholder for Chrome Web Store link
-                // TODO: Replace with actual Chrome Web Store URL when available
-                alert('Chrome Web Store link will be added here. Please add the extension URL later.');
-                // window.open('CHROME_WEB_STORE_URL', '_blank');
+                // Open Chrome Web Store extension page
+                window.open('https://chromewebstore.google.com/detail/form-auto-filler/caeenemjlhgencnmeaonnhccnlfndopb?utm_source=item-share-cb', '_blank');
             });
         });
     }
